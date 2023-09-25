@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+/*비디오 안 큰텍스트*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+/*비디오 안 작은텍스트*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* 웰컴문구*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    /*푸터의 높이를 빼줘야함.*/
+    padding-bottom: 250px;
+}
+
+.nav {
+    margin: 0 auto;
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    top: 0%;
+    width: 100%;
+    height: 70px;
+    z-index: 999;
+
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    width: 230px;
+}
+
+.nav ul {
+    list-style: none;
+    padding-top: 17px;
+}
+
+.nav_item {
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'Heebo', sans-serif;
+}
+
+.nav_item_link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*-------------------------비디오 시작-----------------------*/
+.video_wrap {
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    margin: 0px auto;
+    position: relative;
+}
+
+.textBox {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.textBox_text1 {
+    color: white;
+    font-size: 60px;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Staatliches', cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    filter: drop-shadow(2px 5px 3px #444444);
+}
+
+.textBox_text2 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.video_wrap video {
+    width: 100%;
+}
+
+/*--------------------소개말 및 배너 시작------------------------*/
+.info {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+.info p{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+.info_text1 {
+    font-size: 50px;
+    padding-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 4px;
+    color: #577b0d; /*4d693f*/
+}
+.info img{
+    width: 250px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.info_text2 {
+    font-size: 16px;
+    padding-top: 5px;
+    font-family: 'Heebo', sans-serif;
+    color: #757575;
+}
+
+.banner {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //background-image: linear-gradient(0deg, #e3f09d 1%, white);
+}
+
+.banner a {
+    text-decoration-line: none;
+}
+
+.banner_item {
+    width: 360px;
+    height: 80px;
+    background-color: white;
+    //border: 1px dotted #939393;
+    filter: drop-shadow(0px 0px 7px #bababa);
+    margin: 0 10px 0 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemPic {
+    width: 40px;
+}
+
+.itemPic1 {
+    /*쇼핑백 이미지만 커서 따로 클래스명 설정*/
+    width: 30px;
+}
+
+.banner_item p {
+    padding: 0 15px 0 15px;
+    font-size: 22px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    color: #6b893d;
+    /*#709040*/
+}
+
+/*--------------------소개사진----------------------*/
+.intro {
+    width: 100%;
+    height: 1100px;
+    display: grid;
+    grid-template-columns: 470px 600px;
+    grid-template-rows: 680px 350px;
+    justify-content: center;
+}
+
+.introItem {
+    margin: 15px;
+    overflow: hidden;
+}
+
+.introItem img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.intro2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introText {
+    width: 80%;
+}
+
+.introText h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 70px;
+    color: #4d693f;
+    letter-spacing: 7px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+.introText p {
+    margin: 15px 0;
+    font-family: 'Heebo', sans-serif;
+    font-size: 18px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+.firstP {
+    color: #f0bc5a;
+    font-weight: 600;
+}
+.secondP {
+    color: #4c4c4c;
+}
+
+.ad_Pic.fadeIn,
+.introText h2.fadeIn,
+.introText p.fadeIn,
+.timeTableWrap p.fadeIn,
+.info p.fadeIn, .info img.fadeIn{
+    opacity: 1;
+    transform: translateY(0);
+}
+.timeTable{
+    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/fixedBack.jpg');
+    background-attachment:fixed;
+    background-size: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #4d693f;
+    height: 500px;
+    color: white;
+}
+.timeTitle{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+}
+.timeTableWrap p{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+.timeP1{
+    padding: 40px 0 20px;
+    font-weight: 500;
+    font-size: 22px;
+    font-family: 'Manrope', sans-serif;
+}
+.timeP2{
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+}
+
+/*---------------광고 이미지-----------------*/
+.advertise {
+    width: 100%;
+}
+
+.ad_Pic {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/*
+.ad_Pic.fadeIn{
+    opacity: 1;
+    transform: translateY(0);
+}*/
+
+/*---------------이벤트 배너 수정중-----------------*/
+.eventWarp {
+    width: 100%;
+    height: 530px;
+    background-color: antiquewhite;
+}
+
+.eventTitle {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.eventItemWrap {
+    position: relative;
+    width: 1200px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: coral;
+    border: 1px solid;
+}
+
+.eventItem {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    background-color: gold;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.eventItem img {
+    object-fit: cover;
+    width: 100%;
+    background: linear-gradient(to bottom, #00000000, #000000cc);
+}
+
+/*
+.event1{
+    background: linear-gradient(
+    
+    
+    
+    
+    ),
+    url("img/latte.jpg");
+    background-repeat: no-repeat;
+}
+*/
+
+.container {
+    display: grid;
+    //background-color: gold;
+    margin: 0 auto;
+    /*    width: 1000px;*/
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(2, 550px);
+    justify-content: center;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    display: flex;
+    /*가운데 정렬*/
+    text-align: center;
+    justify-content: center;
+    /*수평 가운데*/
+    //align-items: center; /*수직 가운데*/
+}
+
+.foods {
+    width: 350px;
+    height: 350px;
+    filter: drop-shadow(0px 0px 20px #7c7c7c);
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.foods:hover {
+    transform: scale(1.05);
+}
+
+.item1 {
+    background-color: white;
+}
+
+.item2 {
+    background-color: white;
+    /*#e4ef9e*/
+}
+
+.item3 {
+    background-color: white;
+
+}
+
+.item4 {
+    background-color: white;
+    /*#9eef9e;*/
+}
+
+.item5 {
+    background-color: white;
+    /*#9ed3ef*/
+}
+
+.item6 {
+    background-color: white;
+    /*#9eb4ef*/
+}
+
+/*-----------------아웃사이드 네비바-------------*/
+.nav_outside {
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    top: 0%;
+    width: 100%;
+    height: 70px;
+}
+
+.logo_outside {
+    padding: 10px;
+}
+
+.logo_outside img {
+    width: 240px;
+}
+
+.nav_outside ul {
+    list-style: none;
+    padding-top: 17px;
+}
+
+.nav_outside_item {
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'Heebo', sans-serif;
+}
+
+.nav_outside_item a {
+    display: block;
+    text-decoration: none;
+    color: #4d693f;
+    cursor: pointer;
+}
+
+/*------------------푸터시작-------------------*/
+footer {
+    position: relative;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    font-family: 'Heebo', sans-serif;
+    background-color: #4d693f;
+}
+
+#footer_wrapper {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 1300px;
+    height: 70%;
+    display: flex;
+}
+
+#first_footer {
+    width: 30%;
+    text-align: center;
+    /*border: 2px solid #757575;*/
+}
+
+.footer_logo {
+    /*푸터의 로고를 감싸는 부분*/
+    width: 100%;
+    height: 55%;
+    padding: 15px;
+}
+
+.footer_logo img {
+    width: 220px;
+}
+
+#first_footer p {
+    padding-top: 10px;
+    font-size: 20px;
+    color: #f5f5e9;
+}
+
+.sns {
+    height: 45%;
+    padding: 10px;
+}
+
+.sns img {
+    width: 30px;
+}
+
+#second_footer {
+    width: 70%;
+    display: flex;
+    padding: 0 140px
+}
+
+.footer_nav1 {
+    padding-top: 20px;
+    width: 50%;
+    text-align: center;
+    color: #f5f5e9;
+}
+
+.footer_nav1 a {
+    /*ABOUT US 의 링크부분*/
+    text-decoration: none;
+    color: #f5f5e9;
+}
+
+.footer_nav1 ul {
+    list-style: none;
+}
+
+.footer_nav1 ul li {
+    font-size: 15px;
+    padding: 1px;
+}
+
+.footer_nav1 h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.footer_nav2 {
+    padding-top: 40px;
+    width: 50%;
+    text-align: center;
+    color: #f5f5e9;
+}
+
+select {
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 20px;
+    border: 2px solid #f5f5e9;
+    border-radius: 50px;
+}
+
+#copy {
+    padding: 35px;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    color: #f5f5e9;
+    background-color: #4d693f;
+    font-size: 13px;
+}
