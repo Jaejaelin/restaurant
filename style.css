@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* 웰컴문구*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,12 +16,15 @@ html,
 body {
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
     min-height: 100vh;
-    overflow-x:hidden;
+    /*height: 100%;*/
 }
 
-#wrapper {
+.wrapper {
     min-height: 100%;
+    /*padding-bottom: 250px; 푸터의 높이를 빼줘야함.
+    height: auto;*/
 }
 
 .nav {
@@ -107,22 +111,27 @@ body {
     height: 300px;
     text-align: center;
 }
-.info p{
+
+.info p {
     transform: translateY(50px);
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
 }
+
 .info_text1 {
     font-size: 50px;
     padding-top: 20px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 4px;
-    color: #577b0d; /*4d693f*/
+    color: #577b0d;
+    /*4d693f*/
 }
-.info img{
+
+.info img {
     width: 230px;
     transform: translateY(50px);
     opacity: 0;
+    margin: 5px;
     transition: opacity 1s ease, transform 1s ease;
 }
 
@@ -216,6 +225,7 @@ body {
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
 }
+
 .introText p {
     margin: 15px 0;
     font-family: 'Heebo', sans-serif;
@@ -224,10 +234,12 @@ body {
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
 }
+
 .firstP {
     color: #f0bc5a;
     font-weight: 600;
 }
+
 .secondP {
     color: #4c4c4c;
 }
@@ -236,13 +248,15 @@ body {
 .introText h2.fadeIn,
 .introText p.fadeIn,
 .timeTableWrap p.fadeIn,
-.info p.fadeIn, .info img.fadeIn{
+.info p.fadeIn,
+.info img.fadeIn {
     opacity: 1;
     transform: translateY(0);
 }
-.timeTable{
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/fixedBack.jpg');
-    background-attachment:fixed;
+
+.timeTable {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/fixedBack.jpg');
+    background-attachment: fixed;
     background-size: 100%;
     width: 100%;
     display: flex;
@@ -253,23 +267,27 @@ body {
     height: 500px;
     color: white;
 }
-.timeTitle{
+
+.timeTitle {
     font-size: 25px;
     font-weight: 600;
     font-family: 'Manrope', sans-serif;
 }
-.timeTableWrap p{
+
+.timeTableWrap p {
     transform: translateY(50px);
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
 }
-.timeP1{
+
+.timeP1 {
     padding: 40px 0 20px;
     font-weight: 500;
     font-size: 22px;
     font-family: 'Manrope', sans-serif;
 }
-.timeP2{
+
+.timeP2 {
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
 }
@@ -409,6 +427,166 @@ body {
     /*#9eb4ef*/
 }
 
+/*-----------------로그인 및 회원가입창-------------*/
+.loninWrapper {
+    width: 500px;
+    padding: 30px 80px;
+    margin: 40px auto;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(9px);
+    border-radius: 10px;
+    text-align: center;
+    opacity: 90%;
+    box-shadow: 0 0 10px (0, 0, 0, .2);
+    font-family: 'Heebo', sans-serif;
+}
+
+.loninWrapper h3 {
+    font-size: 43px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: 'Heebo', sans-serif;
+    letter-spacing: 3px;
+}
+
+.inputLabel {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+form input {
+    border-radius: 2px;
+    width: 100%;
+    outline: none;
+    border: 1px solid white;
+    padding: 11px 12px;
+    background-color: antiquewhite;
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+}
+
+.inputLabel i {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -1px;
+    border-bottom: 2px solid #7dcc22;
+    transition: all .3s;
+}
+
+.inputLabel input:focus + i {
+    left: 0;
+    right: 0;
+    transition: all .3s;
+}
+
+.inputLabel input:focus {
+    border: 1px solid #b2b2b2;
+}
+
+.division {
+    margin: 0 auto;
+    width: 270px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+}
+
+.bar {
+    flex: auto;
+    border: none;
+    height: 1px;
+    background-color: #e3e2e2;
+}
+
+.division p {
+    padding: 0 10px;
+}
+
+.signUpGoogle {
+    width: 92%;
+    margin: 0 auto;
+    padding: 9px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.signUpGoogle img {
+    width: 18px;
+    margin: 0 10px;
+}
+
+.signUpGoogle span {
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+.terms {
+    margin-top: 0.2rem;
+    color: #f2f2f2;
+}
+
+.terms input {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.terms label {
+    font-size: 13px;
+}
+
+.terms a { /*Terms & Conditions*/
+    color: #12c1fb;
+    text-decoration: none;
+}
+.loginButton {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    color: white;
+    cursor: pointer;
+    background-color: #61b14d; /*cadetblue*/
+    font-family: 'Heebo', sans-serif;
+}
+
+.loginButton:hover {
+    background-color: #eac766;
+} 
+.member {
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #f2f2f2;
+}
+
+.member a {/*Login Here*/
+    color: #12c1fb;
+    text-decoration: none;
+}
+
+.recover {
+    text-align: right;
+    font-size: 0.7rem;
+    margin: 0.3rem 0.8rem 0.5rem 0;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
 /*-----------------아웃사이드 네비바-------------*/
 .nav_outside {
     margin: 0 auto;
@@ -424,18 +602,18 @@ body {
 }
 
 .logo_outside img {
-    width: 240px;
+    width: 200px;
 }
 
 .nav_outside ul {
     list-style: none;
-    padding-top: 17px;
+    padding-top: 14px;
 }
 
 .nav_outside_item {
     display: inline-block;
-    padding-right: 30px;
-    font-size: 19px;
+    padding-right: 50px;
+    font-size: 18px;
     font-weight: 600;
     font-family: 'Heebo', sans-serif;
 }
@@ -450,7 +628,9 @@ body {
 /*------------------푸터시작-------------------*/
 footer {
     position: sticky;
-    top:100%;
+    top: 100%;
+    /*position: relative;*/
+    /*transform: translateY(-100%);*/
     width: 100%;
     height: 250px;
     margin: 0 auto;
@@ -491,7 +671,7 @@ footer {
 
 .sns {
     height: 45%;
-    padding: 10px;
+    padding-top: 40px;
 }
 
 .sns img {
